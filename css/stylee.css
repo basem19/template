@@ -584,7 +584,6 @@ ul {
 
 /* End Projects Table */
 
-
 /* Start settings */
 .settings-page {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -682,14 +681,426 @@ ul {
 .settings-page .social>div:focus-within i {
     color: black;
 }
-.settings-page .social>div:focus-within  {
+
+.settings-page .social>div:focus-within {
     border: 1px solid #1c1c1c9e;
     border-radius: 6px;
 }
 
 /*  End Social Info */
+/*  Start Widgets Control*/
+.widgets .control label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.widgets .control label::after,
+.widgets .control label::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+}
+
+.widgets .control label::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+    border-radius: 5px;
+}
+
+.widgets .control label::before:hover {
+    border-color: var(--blue-alt-color);
+}
+
+.widgets .control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: '\f00c';
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    background-color: var(--blue-color);
+    color: white;
+    transform: scale(0) rotate(360deg);
+    transition: .4s;
+}
+
+.widgets .control input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.widgets .control input[type="checkbox"]:checked+label::after {
+    transform: scale(1);
+    border-radius: 5px;
+}
+
+/*  End Widgets Control*/
+/*  Start Backup Manager*/
+.backup .data input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup .data label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.backup .data label::after,
+.backup .data label::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+}
+
+.backup .data label::before {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    left: 0;
+    margin-top: -11px;
+}
+
+.backup .data label::after {
+    width: 12px;
+    height: 12px;
+    left: 5px;
+    margin-top: -6px;
+    background-color: var(--blue-color);
+    transition: .4s;
+    transform: scale(0);
+}
+
+.backup .data input[type="radio"]:checked+label::before {
+    border-color: var(--blue-color);
+}
+
+.backup .data input[type="radio"]:checked+label::after {
+    transform: scale(1);
+}
+
+.backup .servers input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.backup .servers {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.backup .servers .server {
+    border: 2px solid #eee;
+    cursor: pointer;
+
+}
+
+.backup .servers .server label {
+    cursor: pointer;
+}
+
+.backup .servers input[type="radio"]:checked+.server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+/*  End Backup Manager*/
+/*  Start Profile Page*/
+.profile-page .avatar-box {
+    width: 300px;
+    border-right: 1px solid #eee;
+}
+
+.profile-page .avatar-box img {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-page .avatar-box .level {
+    width: 70%;
+    height: 4px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.profile-page .avatar-box .level span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+}
+
+.profile-page .info-box .box {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: .3s;
+}
+
+.profile-page .info-box .box:hover {
+    background-color: #f9f9f9;
+}
+
+.profile-page .info-box .box>div {
+    padding: 10px 0 0;
+}
+
+.pro.toggle-switch {
+    background-color: #ccc;
+    width: 50px;
+    height: 20px;
+    border-radius: 16px;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pro.toggle-switch::before {
+    content: "\f00d";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    font-size: 11px;
+}
+
+.toggle-box:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.pro.toggle-box:checked+.toggle-switch::before {
+    content: "\f00c";
+    left: 33px;
+    color: var(--blue-alt-color);
+    font-size: 11px;
+}
+
+.other-data .skills {
+    flex-grow: 1;
+}
+
+.other-data .skills ul li {
+    padding: 15px 5px;
+}
+
+.other-data .skills ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.other-data .skills ul li span {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.other-data .skills ul li span:not(:last-child) {
+    margin-right: 5px;
+}
+
+.other-data .activities {
+    flex-grow: 3;
+}
+
+.other-data .activities .activity:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.other-data .activities .activity img {
+    width: 65px;
+    height: 65px;
+    margin-right: 15px;
+}
+
+/*  End Profile Page*/
+/*  Start projects Page*/
+.projects {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.projects .project h4 {
+    font-weight: 650;
+}
+
+.projects .project .data {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.projects .project .team {
+    position: relative;
+    min-height: 60px;
+    line-height: 100px;
+}
+
+.projects .project .team a {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.projects .project .team a:nth-child(2) {
+    left: 25px;
+}
+
+.projects .project .team a:nth-child(3) {
+    left: 50px;
+}
+
+.projects .project .team a:nth-child(4) {
+    left: 75px;
+}
+
+.projects .project .team a:nth-child(5) {
+    left: 100px;
+}
+
+.projects .project .team a:hover {
+    z-index: 1000;
+}
+
+.projects .project .team img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.projects .project .do {
+    justify-content: flex-end;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.projects .project .do span {
+    width: fit-content;
+    padding: 3px 8px;
+    margin-left: 5px;
+}
+
+.projects .project .info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.projects .project .progress {
+    position: relative;
+    height: 8px;
+    width: 260px;
+    border-radius: 6px;
+}
+
+.projects .project .progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/*  End projects Page*/
+/* Start Courses */
+.courses {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.courses .course {
+    overflow: hidden;
+}
+
+.courses .course .cover {
+    width: 100%;
+}
+
+.courses .course .inst {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 20px;
+    left: 20px;
+}
+
+.courses .course .descr {
+    line-height: 1.8;
+}
+
+.courses .course .info {
+    border-top: 1px solid #eee;
+}
+
+.courses .course .info .title {
+    position: absolute;
+    left: 50%;
+    top: -13px;
+    transform: translateX(-50%);
+    height: 27px;
+}
+
+/* End Courses */
+/* Start friends */
+.friends {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.friends .contact {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.friends .contact i {
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: #eee;
+    color: #333;
+    transition: .3s;
+}
+
+.friends .friend i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends .friend .icons {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 
+/* ENd friends */
 
 
 
@@ -707,6 +1118,18 @@ ul {
 
 
 /* Start Mobile */
+
+@media (min-width:768px) {
+    .profile-page .info-box .box>div {
+        min-width: 300px;
+    }
+
+    .other-data .activities .activity .data {
+        margin-left: auto;
+        text-align: right;
+    }
+}
+
 @media(max-width:767px) {
     .h-mobile {
         display: none;
@@ -759,6 +1182,86 @@ ul {
 
     .settings-page {
         grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+
+    .backup .servers {
+        flex-wrap: wrap;
+    }
+
+    .profile-page .avatar-box {
+        border: none
+    }
+
+    .profile-page .profile-view {
+        flex-direction: column;
+    }
+
+    .profile-page .avatar-box img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-page .info-box .box>div {
+        width: 100%;
+    }
+
+    .pro.toggle-switch {
+        margin: auto;
+    }
+
+
+    .other-data .activities .activity {
+        flex-direction: column;
+    }
+
+    .other-data .activities .activity img {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .other-data .activities .activity .data {
+        margin-top: 15px;
+    }
+
+    .projects {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+
+    .projects .project .do {
+        flex-direction: column;
+    }
+
+    .projects .project .do span:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .projects .project .info {
+        flex-direction: column;
+    }
+
+    .projects .project .progress {
+        margin-bottom: 15px;
+    }
+
+    .projects .project .progress {
+        width: 220px;
+    }
+
+    .courses {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+
+    .friends {
+        grid-template-columns: minmax(200px, 1fr);
         margin-left: 10px;
         margin-right: 10px;
         gap: 10px;
